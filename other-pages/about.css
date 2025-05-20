@@ -1,0 +1,640 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+@font-face {
+    font-family: title;
+    src: url(../assets/FIGHTBACK.ttf);
+}
+@font-face {
+    font-family: codec;
+    src: url(../assets/Codec-Cold-Light-trial.ttf);
+}
+/*               DESKTOP SCREEN              */
+@media screen and (min-width: 1024px){
+    body{
+        height: 100%;
+        margin: 0;
+    }
+    .bg-image{
+        background-image: url(../assets/Desktop.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        filter: blur(5px);
+        -webkit-filter: blur(5px);
+    }
+    .main{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 0.8fr 1fr 0.8fr;
+        grid-template-rows: 0.6fr 0.3fr 1.9fr 0.7fr 0.6fr;
+        grid-template-areas: 
+        'block-1 block-2 block-3'
+        'block-1 about block-3'
+        'block-1 context block-3'
+        'block-1 back-btn block-3'
+        'block-1 block-4 block-3'
+        ;
+        /* bg image settings */
+        width: 100%;
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+/*     .main div{
+        border: 1px solid grey;
+        border-radius: 10px;
+    } */
+    .block-1{
+        grid-area: block-1;
+    }
+    .block-2{
+        grid-area: block-2;
+    }
+    .block-3{
+        grid-area: block-3
+    }
+    .about{
+        grid-area: about;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: title;
+        font-size: 35px;
+    }
+    .context{
+        grid-area: context;
+        text-align: center;
+        font-family: codec;
+        background-color: rgb(0, 0, 0);
+        background-color: rgb(0, 0, 0, 0.4);
+        border-radius: 10px;
+        padding: 8px;
+        
+    }
+    .back-btn{
+        grid-area: back-btn;
+        padding: 8px;
+        border-top: 1px solid  white;
+        margin-top: 10px;
+    }
+    .fa-arrow-left{
+        font-size: 14px;
+        margin-right: 6px;
+        position: relative;
+        bottom: 2px;
+    }
+    .back-btn div{
+        width: 100px;
+        margin: 0 auto;
+        box-shadow: 1px 1px 50px #7b5199;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: title;
+        font-size: 24px;
+        background-image: linear-gradient(
+            to right,#cf0170, #642554
+        );
+        border-radius: 10px;
+        cursor: pointer;
+    
+    }
+    .back-btn div:hover{
+        background: #df9649;
+        transition: 0.5s;
+    }
+    .back-btn a{
+        text-decoration: none;
+    }
+
+}
+
+/*                  TABLET SCREEN            */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    body{
+        height: 100%;
+        margin: 0;
+    }
+    .bg-image{
+        background-image: url(../assets/Tablet.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        filter: blur(5px);
+        -webkit-filter: blur(5px);
+    }
+    .main{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 0.4fr 1fr 0.4fr;
+        grid-template-rows: 0.6fr 0.3fr 1.9fr 0.7fr 0.6fr;
+        grid-template-areas: 
+        'block-1 block-2 block-3'
+        'block-1 about block-3'
+        'block-1 context block-3'
+        'block-1 back-btn block-3'
+        'block-1 block-4 block-3'
+        ;
+        /* bg image settings */
+        width: 100%;
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    /* .main div{
+        border: 1px solid grey;
+        border-radius: 10px;
+    } */
+    .block-1{
+        grid-area: block-1;
+    }
+    .block-2{
+        grid-area: block-2;
+    }
+    .block-3{
+        grid-area: block-3
+    }
+    .about{
+        grid-area: about;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: title;
+        font-size: 23px;
+    }
+    .context{
+        grid-area: context;
+        text-align: center;
+        font-family: codec;
+        font-size: 14px;
+        background-color: rgb(0, 0, 0);
+        background-color: rgb(0, 0, 0, 0.4);
+        border-radius: 10px;
+        padding: 8px;
+        
+    }
+    .back-btn{
+        grid-area: back-btn;
+        padding: 8px;
+        border-top: 1px solid  white;
+        margin-top: 10px;
+    }
+    .fa-arrow-left{
+        font-size: 14px;
+        margin-right: 6px;
+        position: relative;
+        bottom: 2px;
+    }
+    .back-btn div{
+        width: 97px;
+        height: 37px;
+        margin: 0 auto;
+        box-shadow: 1px 1px 50px #7b5199;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: title;
+        font-size: 24px;
+        background-image: linear-gradient(
+            to right,#cf0170, #642554
+        );
+        border-radius: 10px;
+        cursor: pointer;
+    
+    }
+    .back-btn div:hover{
+        background: #df9649;
+        transition: 0.5s;
+    }
+    .back-btn a{
+        text-decoration: none;
+    }
+}
+
+/*              MOBILE LARGE SCREEN          */
+@media screen and (min-width: 425px) and (max-width: 767px){
+    body{
+        height: 100%;
+        margin: 0;
+    }
+    .bg-image{
+        background-image: url(../assets/Mobile.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        filter: blur(5px);
+        -webkit-filter: blur(5px);
+    }
+    .main{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 0.2fr 1fr 0.2fr;
+        grid-template-rows: 0.6fr 0.3fr 1.9fr 0.7fr 0.6fr;
+        grid-template-areas: 
+        'block-1 block-2 block-3'
+        'block-1 about block-3'
+        'block-1 context block-3'
+        'block-1 back-btn block-3'
+        'block-1 block-4 block-3'
+        ;
+        /* bg image settings */
+        width: 100%;
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    /* .main div{
+        border: 1px solid grey;
+        border-radius: 10px;
+    } */
+    .block-1{
+        grid-area: block-1;
+    }
+    .block-2{
+        grid-area: block-2;
+    }
+    .block-3{
+        grid-area: block-3
+    }
+    .about{
+        grid-area: about;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: title;
+        font-size: 22px;
+    }
+    .context{
+        grid-area: context;
+        text-align: center;
+        font-family: codec;
+        font-size: 13px;
+        background-color: rgb(0, 0, 0);
+        background-color: rgb(0, 0, 0, 0.4);
+        border-radius: 10px;
+        padding: 8px;
+        
+    }
+    .back-btn{
+        grid-area: back-btn;
+        padding: 8px;
+        border-top: 1px solid  white;
+        margin-top: 10px;
+    }
+    .fa-arrow-left{
+        font-size: 14px;
+        margin-right: 6px;
+        position: relative;
+        bottom: 2px;
+    }
+    .back-btn div{
+        width: 100px;
+        margin: 0 auto;
+        box-shadow: 1px 1px 50px #7b5199;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: title;
+        font-size: 24px;
+        background-image: linear-gradient(
+            to right,#cf0170, #642554
+        );
+        border-radius: 10px;
+        cursor: pointer;
+    
+    }
+    .back-btn div:hover{
+        background: #df9649;
+        transition: 0.5s;
+    }
+    .back-btn a{
+        text-decoration: none;
+    } 
+}
+
+/*            MOBILE MEDIUM SCREEN            */
+@media screen and (min-width: 375px) and (max-width: 424px){
+    body{
+        height: 100%;
+        margin: 0;
+    }
+    .bg-image{
+        background-image: url(../assets/Mobile.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        filter: blur(5px);
+        -webkit-filter: blur(5px);
+    }
+    .main{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 0.2fr 1fr 0.2fr;
+        grid-template-rows: 0.6fr 0.3fr 1.9fr 0.7fr 0.6fr;
+        grid-template-areas: 
+        'block-1 block-2 block-3'
+        'block-1 about block-3'
+        'block-1 context block-3'
+        'block-1 back-btn block-3'
+        'block-1 block-4 block-3'
+        ;
+        /* bg image settings */
+        width: 100%;
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+/*     .main div{
+        border: 1px solid grey;
+        border-radius: 10px;
+    } */
+    .block-1{
+        grid-area: block-1;
+    }
+    .block-2{
+        grid-area: block-2;
+    }
+    .block-3{
+        grid-area: block-3
+    }
+    .about{
+        grid-area: about;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: title;
+        font-size: 22px;
+    }
+    .context{
+        grid-area: context;
+        text-align: center;
+        font-family: codec;
+        font-size: 13px;
+        background-color: rgb(0, 0, 0);
+        background-color: rgb(0, 0, 0, 0.4);
+        border-radius: 10px;
+        padding: 8px;
+        
+    }
+    .back-btn{
+        grid-area: back-btn;
+        padding: 8px;
+        border-top: 1px solid  white;
+        margin-top: 10px;
+    }
+    .fa-arrow-left{
+        font-size: 14px;
+        margin-right: 6px;
+        position: relative;
+        bottom: 2px;
+    }
+    .back-btn div{
+        width: 94px;
+        height: 35px;
+        margin: 0 auto;
+        box-shadow: 1px 1px 50px #7b5199;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: title;
+        font-size: 22px;
+        background-image: linear-gradient(
+            to right,#cf0170, #642554
+        );
+        border-radius: 10px;
+        cursor: pointer;
+    
+    }
+    .back-btn div:hover{
+        background: #df9649;
+        transition: 0.5s;
+    }
+    .back-btn a{
+        text-decoration: none;
+    }     
+}
+
+/*             MOBILE SMALL SCREEN               */
+@media screen and (min-width: 320px) and (max-width: 374px){
+    body{
+        height: 100%;
+        margin: 0;
+    }
+    .bg-image{
+        background-image: url(../assets/Mobile.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        filter: blur(5px);
+        -webkit-filter: blur(5px);
+    }
+    .main{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 0.2fr 1fr 0.2fr;
+        grid-template-rows: 0.6fr 0.3fr 1.9fr 0.7fr 0.6fr;
+        grid-template-areas: 
+        'block-1 block-2 block-3'
+        'block-1 about block-3'
+        'block-1 context block-3'
+        'block-1 back-btn block-3'
+        'block-1 block-4 block-3'
+        ;
+        /* bg image settings */
+        width: 100%;
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    /* .main div{
+        border: 1px solid grey;
+        border-radius: 10px;
+    } */
+    .block-1{
+        grid-area: block-1;
+    }
+    .block-2{
+        grid-area: block-2;
+    }
+    .block-3{
+        grid-area: block-3
+    }
+    .about{
+        grid-area: about;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: title;
+        font-size: 22px;
+    }
+    .context{
+        grid-area: context;
+        text-align: center;
+        font-family: codec;
+        font-size: 12px;
+        background-color: rgb(0, 0, 0);
+        background-color: rgb(0, 0, 0, 0.4);
+        border-radius: 10px;
+        padding: 8px;
+    }
+    .back-btn{
+        grid-area: back-btn;
+        padding: 8px;
+        border-top: 1px solid  white;
+        margin-top: 10px;
+    }
+    .fa-arrow-left{
+        font-size: 14px;
+        margin-right: 6px;
+        position: relative;
+        bottom: 2px;
+    }
+    .back-btn div{
+        width: 94px;
+        height: 35px;
+        margin: 0 auto;
+        box-shadow: 1px 1px 50px #7b5199;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: title;
+        font-size: 22px;
+        background-image: linear-gradient(
+            to right,#cf0170, #642554
+        );
+        border-radius: 10px;
+        cursor: pointer;
+    
+    }
+    .back-btn div:hover{
+        background: #df9649;
+        transition: 0.5s;
+    }
+    .back-btn a{
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 319px){
+    body{
+        height: 100%;
+        margin: 0;
+    }
+    .bg-image{
+        background-image: url(../assets/Mobile.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        filter: blur(5px);
+        -webkit-filter: blur(5px);
+    }
+    .main{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 0.2fr 1fr 0.2fr;
+        grid-template-rows: 0.6fr 0.3fr 1.9fr 0.7fr 0.6fr;
+        grid-template-areas: 
+        'block-1 block-2 block-3'
+        'block-1 about block-3'
+        'block-1 context block-3'
+        'block-1 back-btn block-3'
+        'block-1 block-4 block-3'
+        ;
+        /* bg image settings */
+        width: 100%;
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    /* .main div{
+        border: 1px solid grey;
+        border-radius: 10px;
+    } */
+    .block-1{
+        grid-area: block-1;
+    }
+    .block-2{
+        grid-area: block-2;
+    }
+    .block-3{
+        grid-area: block-3
+    }
+    .about{
+        grid-area: about;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: title;
+        font-size: 22px;
+    }
+    .context{
+        grid-area: context;
+        text-align: center;
+        font-family: codec;
+        font-size: 12px;
+        background-color: rgb(0, 0, 0);
+        background-color: rgb(0, 0, 0, 0.4);
+        border-radius: 10px;
+        padding: 8px;
+    }
+    .back-btn{
+        grid-area: back-btn;
+        padding: 8px;
+        border-top: 1px solid  white;
+        margin-top: 10px;
+    }
+    .fa-arrow-left{
+        font-size: 14px;
+        margin-right: 6px;
+        position: relative;
+        bottom: 2px;
+    }
+    .back-btn div{
+        width: 94px;
+        height: 35px;
+        margin: 0 auto;
+        box-shadow: 1px 1px 50px #7b5199;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: title;
+        font-size: 22px;
+        background-image: linear-gradient(
+            to right,#cf0170, #642554
+        );
+        border-radius: 10px;
+        cursor: pointer;
+    
+    }
+    .back-btn div:hover{
+        background: #df9649;
+        transition: 0.5s;
+    }
+    .back-btn a{
+        text-decoration: none;
+    }
+}
